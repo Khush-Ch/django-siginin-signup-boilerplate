@@ -23,3 +23,5 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('', include('appname.urls')),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+
+handler404 = 'appname.views.error_404_view'
